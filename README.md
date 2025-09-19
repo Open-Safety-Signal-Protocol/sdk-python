@@ -32,11 +32,17 @@ print(event)
 You can emit the sample event directly from the repository:
 
 ```bash
-python -m sdk-python.examples.send_event --print
+python sdk-python/examples/send_event.py --print
 ```
 
 Use `--collector-endpoint` (and optional `--auth-token`) to forward the CloudEvent to a collector, and `--log-level` to adjust verbosity.
 
 ## Validation (optional)
 
+```bash
+pip install "ossp-sdk[validate]"
+```
+
 Set the `OSSP_VALIDATE` environment variable and point `OSSP_SCHEMA_DIR` to the spec repository path `schema/v1.0.0` to validate payloads locally.
+
+If offline, pre-load draft 2020-12 metaschema or vendor the metas under specification/schema/meta/2020-12/.

@@ -19,6 +19,9 @@ classifiers = [
 ]
 dependencies = ["requests>=2.25.0"]
 
+[project.optional-dependencies]
+validate = ["jsonschema>=4.18"]
+
 [project.urls]
 Specification = "https://github.com/OSSP-WG/specification"
 
